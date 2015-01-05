@@ -1,0 +1,22 @@
+{
+  "name": "homeland",
+  "version": "0.0.1",
+  "description": "Interface for HM-CFG-USB2 & HM-CFG-LAN as well as an implementation for the BidCos protocol",
+  "main": "index.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "keywords": [
+    "homematic",
+    "bidcos",
+    "HM-CFG-USB2",
+    "HM-CFG-USB",
+    "HM-CFG-LAN"
+  ],
+  "author": "Sebastian Golasch",
+  "license": "MIT",
+  "dependencies": {
+    "node-hid": "0.3.2",
+    "q": "1.1.2"
+  }
+}
