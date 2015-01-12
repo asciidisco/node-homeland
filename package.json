@@ -1,6 +1,6 @@
 {
   "name": "homeland",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Interface for HM-CFG-USB2 & HM-CFG-LAN as well as an implementation for the BidCos protocol",
   "main": "index.js",
   "scripts": {
@@ -17,6 +17,7 @@
   "license": "MIT",
   "dependencies": {
     "node-hid": "0.3.2",
-    "q": "1.1.2"
+    "q": "1.1.2",
+    "winston": "0.8.3"
   }
 }

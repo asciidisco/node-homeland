@@ -1,46 +1,40 @@
-var Homematic = require('../index');
+var Homeland = require('../index');
+var hm = new Homeland();
 
-var hm = new Homematic();
+var devices = {};
 
 hm.on('ready', function (usb) {
-	console.log('USB Connection ready!');
-	usb.device.on('data', function (data) {
-		//console.log(data.toString('hex'));
-	});
-	setTimeout(function () {
-		var buf = new Buffer('9B36F4360000000000019B36F43604A01142424217688C0201C80000', 'hex');
-		var buf2 = new Buffer('S', 'ascii');
-		var buf3 = Buffer.concat([buf2, buf], 'hex');
-		//var buf2 = new Buffer('BBB', 'ascii');
-		//var buf3 = new Buffer(Buffer.concat([buf, buf2]), 'hex');
-		//var buf3 = Buffer.concat([buf, buf2]);
-		console.log(buf3);
-		try {
-			usb.device.write(buf3);
-		} catch (e) {
-			console.log(e);
-		}
-	}, 1000);
+	//console.log('USB Connection ready!');
 
-	//var buf = new Buffer('K', 'ascii');
-	
-	//console.log(buf);
-	/*try {
-		usb.device.write(buf);
-	} catch (e) {
-		console.log(usb.device);
-	}*/
+	setTimeout(function () {
+		//devices['17688C'].off();
+		setTimeout(function () {
+			devices['17688C'].on();
+			setTimeout(function () {
+				devices['17688C'].off();
+				setTimeout(function () {
+					devices['17688C'].on();
+				}, 2000);	
+			}, 2000);
+		}, 2000);
+	}, 2000);
+
 });
 
-hm.on('device.add', function (data) {
-	console.log('device.add', data);
+hm.on('device.add', function (device) {
+	console.log('device.add', device);
+	devices[device.hmId] = device;
 });
 
 hm.on('device.event', function (data) {
-	console.log('device.event', data);
+	//console.log('device.event', data);
 });
 
 hm.connect().then(function (hm) {
-	hm.addDevice('1ED6D0', 'HM-PB-2-WM55');
-	hm.addDevice('17688C', 'HM-LC-Sw1-Pl');
+	hm.setOwner(424242).then(function () {
+		hm.addDevice({id: '1ED6D0', model: 'HM-PB-2-WM55'});
+		hm.addDevice({id: '17688C', model: 'HM-LC-Sw1-Pl'});
+	});
+}).catch(function (err) {
+	console.error(err);
 });
