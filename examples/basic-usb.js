@@ -24,7 +24,7 @@ hm.on('device.event', function (/*device,*/ state, changed) {
 hm.connect().then(function (hm) {
 	hm.setOwner(424242).then(function () {
 		//hm.addDevice({id: '1ED6D0', model: 'HM-PB-2-WM55', serial: 'JEQ1234567'});
-		//hm.addDevice({id: '17688C', model: 'HM-LC-Sw1-Pl'});
+		//hm.addDevice({id: '197B72', model: 'HM-LC-Sw1-Pl'});
 		//hm.addDevice({id: '1936D6', model: 'HM-CC-TC'});
 		//hm.addDevice({id: '19A1CA', model: 'HM-Sec-SC'});
 		//hm.addDevice({id: '2916DA', model: 'HM-Sec-SCo'});

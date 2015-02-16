@@ -1,0 +1,61 @@
+{
+  "indent": {
+    "value": "  ",
+    "ArrayExpression": 1,
+    "AssignmentExpression": 1,
+    "BinaryExpression": 1,
+    "ConditionalExpression": 1,
+    "CallExpression": 1,
+    "CatchClause": 1,
+    "ConditionalExpression": 1,
+    "DoWhileStatement": 1,
+    "ForInStatement": 1,
+    "ForStatement": 1,
+    "FunctionDeclaration": 1,
+    "FunctionExpression": 1,
+    "IfStatement": 1,
+    "MemberExpression": 1,
+    "MultipleVariableDeclaration": 1,
+    "ObjectExpression": 1,
+    "ReturnStatement": 1,
+    "SwitchCase": 1,
+    "SwitchStatement": 1,
+    "TopLevelFunctionBlock": 1,
+    "TryStatement": 1,
+    "VariableDeclaration.LogicalExpression": 1,
+    "WhileStatement": 1
+  },
+
+  "lineBreak": {
+    "value": "\n",
+
+    "before": {
+    },
+
+    "after": {
+      "FunctionExpressionOpeningBrace": ">=0"
+    }
+  },
+
+  "whiteSpace": {
+    "value": " ",
+    "removeTrailing": 1,
+
+    "before" : {
+      "FunctionDeclarationOpeningBrace": 1,
+      "FunctionDeclarationClosingBrace": 1,
+      "FunctionExpressionOpeningBrace": 1,
+      "FunctionExpressionClosingBrace": 1
+    },
+
+    "after": {
+      "FunctionName": 1,
+      "FunctionReservedWord": 1,
+      "FunctionExpressionOpeningBrace": 1,
+      "FunctionExpressionClosingBrace": 1,
+      "FunctionDeclarationOpeningBrace": 1,
+      "FunctionDeclarationClosingBrace": 1
+    }
+  }
+
+}

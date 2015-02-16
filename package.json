@@ -1,12 +1,14 @@
 {
   "name": "homeland",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Interface for HM-CFG-USB2 & HM-CFG-LAN as well as an implementation for the BidCos protocol",
   "main": "index.js",
   "scripts": {
     "test": "gulp test"
   },
   "keywords": [
+    "eq-3",
+    "eq3",
     "homematic",
     "bidcos",
     "HM-CFG-USB2",
@@ -19,5 +21,14 @@
     "node-hid": "0.3.2",
     "q": "1.1.2",
     "winston": "0.8.3"
+  },
+  "devDependencies": {
+    "chai": "1.10.0",
+    "gulp": "3.8.10",
+    "gulp-jshint": "1.9.2",
+    "gulp-jsinspect": "git://github.com/alexeyraspopov/gulp-jsinspect",
+    "gulp-mocha": "2.0.0",
+    "jshint-stylish": "1.0.0",
+    "mocha": "2.1.0"
   }
 }
